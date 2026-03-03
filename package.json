@@ -1,0 +1,44 @@
+{
+  "name": "cctime",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Calculate your Claude Code work time from session logs",
+  "bin": {
+    "cctime": "bin/cctime.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node bin/cctime.js",
+    "today": "node bin/cctime.js --today",
+    "yesterday": "node bin/cctime.js --yesterday",
+    "week": "node bin/cctime.js --week",
+    "month": "node bin/cctime.js --month",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "work-time",
+    "time-tracking",
+    "productivity",
+    "cli"
+  ],
+  "author": "ShahadIshraq",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahadIshraq/cctime.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
