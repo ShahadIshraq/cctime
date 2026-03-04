@@ -10,7 +10,7 @@
  * @param {number} seconds - Total seconds to format
  * @returns {string}
  */
-function formatDuration(seconds) {
+export function formatDuration(seconds) {
   const totalSeconds = Math.round(seconds);
 
   if (totalSeconds >= 3600) {
@@ -30,7 +30,7 @@ function formatDuration(seconds) {
  * @param {number} epochSeconds
  * @returns {string}
  */
-function epochSecondsToLocalTimeString(epochSeconds) {
+export function epochSecondsToLocalTimeString(epochSeconds) {
   const date = new Date(epochSeconds * 1000);
   const hours = String(date.getHours()).padStart(2, '0');
   const minutes = String(date.getMinutes()).padStart(2, '0');
@@ -43,7 +43,7 @@ function epochSecondsToLocalTimeString(epochSeconds) {
  * @param {number} epochSeconds
  * @returns {string}
  */
-function epochSecondsToLocalDateString(epochSeconds) {
+export function epochSecondsToLocalDateString(epochSeconds) {
   const date = new Date(epochSeconds * 1000);
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');

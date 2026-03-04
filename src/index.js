@@ -5,6 +5,7 @@ import { parseSessionFile } from './parse.js';
 import { clusterIntoBlocks } from './cluster.js';
 import { mergeIntervals } from './merge.js';
 import { aggregateByDay, blocksByDay, formatReport } from './aggregate.js';
+import { formatReportPretty } from './format.js';
 
 /**
  * Run the full ccworktime pipeline.
@@ -85,7 +86,10 @@ export async function run(argv) {
   const dayBlocksMap = blocksByDay(finalBlocks);
 
   // Step 8: Format report
-  const report = formatReport(dailyTotals, config, dayBlocksMap);
+  const usePretty = process.stdout.isTTY && !process.env.NO_COLOR;
+  const report = usePretty
+    ? formatReportPretty(dailyTotals, config, dayBlocksMap)
+    : formatReport(dailyTotals, config, dayBlocksMap);
 
   // Step 9: Print to stdout
   console.log(report);
