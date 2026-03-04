@@ -70,7 +70,7 @@ const baseConfig = {
 
 describe('parseSessionFile', () => {
   it('parses a JSONL file and returns sorted events', async () => {
-    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cctime-parse-test-'));
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ccworktime-parse-test-'));
 
     try {
       const filePath = path.join(tmpDir, 'session.jsonl');
@@ -106,7 +106,7 @@ describe('parseSessionFile', () => {
   });
 
   it('filters out events outside the config date range', async () => {
-    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cctime-parse-test-'));
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ccworktime-parse-test-'));
 
     try {
       const filePath = path.join(tmpDir, 'session.jsonl');
@@ -134,7 +134,7 @@ describe('parseSessionFile', () => {
   });
 
   it('skips events with unrecognised types', async () => {
-    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cctime-parse-test-'));
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ccworktime-parse-test-'));
 
     try {
       const filePath = path.join(tmpDir, 'session.jsonl');
@@ -160,7 +160,7 @@ describe('parseSessionFile', () => {
   });
 
   it('returns null for a subagent file when includeSubagents is false', async () => {
-    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cctime-parse-test-'));
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ccworktime-parse-test-'));
 
     try {
       const filePath = path.join(tmpDir, 'agent-session.jsonl');
@@ -198,7 +198,7 @@ describe('parseSessionFile', () => {
   });
 
   it('returns null when the file contains no events in the date range', async () => {
-    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cctime-parse-test-'));
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ccworktime-parse-test-'));
 
     try {
       const filePath = path.join(tmpDir, 'empty-range.jsonl');
@@ -222,7 +222,7 @@ describe('parseSessionFile', () => {
   });
 
   it('normalises epoch-millisecond timestamps found in files', async () => {
-    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cctime-parse-test-'));
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ccworktime-parse-test-'));
 
     try {
       const filePath = path.join(tmpDir, 'ms.jsonl');

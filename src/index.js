@@ -7,7 +7,7 @@ import { mergeIntervals } from './merge.js';
 import { aggregateByDay, blocksByDay, formatReport } from './aggregate.js';
 
 /**
- * Run the full cctime pipeline.
+ * Run the full ccworktime pipeline.
  *
  * @param {string[]} argv - CLI arguments (process.argv.slice(2))
  * @returns {Promise<void>}

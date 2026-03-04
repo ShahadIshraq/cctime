@@ -7,7 +7,7 @@ import path from 'node:path';
 import { run } from '../src/index.js';
 
 // ---------------------------------------------------------------------------
-// End-to-end integration test for the cctime `run()` function.
+// End-to-end integration test for the ccworktime `run()` function.
 //
 // Fixed date: 2026-01-15
 //
@@ -50,7 +50,7 @@ describe('integration: run()', () => {
     //       -Users-test-project/
     //         a1b2c3d4-e5f6-7890-abcd-ef1234567890.jsonl
     // -----------------------------------------------------------------------
-    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cctime-integration-'));
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ccworktime-integration-'));
 
     // projects/<encoded-project>/
     const encodedProject = PROJECT_PATH.replace(/\//g, '-');

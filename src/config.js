@@ -98,7 +98,7 @@ function resolveHome(inputPath) {
  * }}
  */
 const HELP_TEXT = `
-Usage: cctime [options]
+Usage: ccworktime [options]
 
 Calculate work time from Claude Code session logs.
 
@@ -118,10 +118,10 @@ Options:
   --version, -v             Show version number
 
 Examples:
-  cctime                              # Today's work time
-  cctime --from 2026-02-01 --to 2026-02-28   # February totals
-  cctime --project ~/workspace/myapp   # Single project
-  cctime --pause 5                    # 5-min pause threshold`;
+  ccworktime                              # Today's work time
+  ccworktime --from 2026-02-01 --to 2026-02-28   # February totals
+  ccworktime --project ~/workspace/myapp   # Single project
+  ccworktime --pause 5                    # 5-min pause threshold`;
 
 export function parseConfig(argv) {
   const today = todayString();
@@ -256,7 +256,7 @@ export function parseConfig(argv) {
       }
 
       default: {
-        throw new Error(`Unknown option: "${arg}". Run cctime --help for usage.`);
+        throw new Error(`Unknown option: "${arg}". Run ccworktime --help for usage.`);
       }
     }
 

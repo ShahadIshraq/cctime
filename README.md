@@ -1,4 +1,4 @@
-# cctime
+# ccworktime
 
 Calculate how much time you've spent working with Claude Code, based on your local session logs.
 
@@ -7,48 +7,48 @@ Calculate how much time you've spent working with Claude Code, based on your loc
 ### Homebrew (macOS / Linux)
 
 ```sh
-brew install ShahadIshraq/tap/cctime
+brew install ShahadIshraq/tap/ccworktime
 ```
 
 ### Download binary
 
-Grab the latest binary from [GitHub Releases](https://github.com/ShahadIshraq/cctime/releases):
+Grab the latest binary from [GitHub Releases](https://github.com/ShahadIshraq/ccworktime/releases):
 
 ```sh
 # macOS (Apple Silicon)
-curl -fsSL https://github.com/ShahadIshraq/cctime/releases/latest/download/cctime-darwin-arm64.tar.gz | tar xz
-sudo mv cctime-darwin-arm64 /usr/local/bin/cctime
+curl -fsSL https://github.com/ShahadIshraq/ccworktime/releases/latest/download/ccworktime-darwin-arm64.tar.gz | tar xz
+sudo mv ccworktime-darwin-arm64 /usr/local/bin/ccworktime
 
 # macOS (Intel)
-curl -fsSL https://github.com/ShahadIshraq/cctime/releases/latest/download/cctime-darwin-x64.tar.gz | tar xz
-sudo mv cctime-darwin-x64 /usr/local/bin/cctime
+curl -fsSL https://github.com/ShahadIshraq/ccworktime/releases/latest/download/ccworktime-darwin-x64.tar.gz | tar xz
+sudo mv ccworktime-darwin-x64 /usr/local/bin/ccworktime
 
 # Linux (x64)
-curl -fsSL https://github.com/ShahadIshraq/cctime/releases/latest/download/cctime-linux-x64.tar.gz | tar xz
-sudo mv cctime-linux-x64 /usr/local/bin/cctime
+curl -fsSL https://github.com/ShahadIshraq/ccworktime/releases/latest/download/ccworktime-linux-x64.tar.gz | tar xz
+sudo mv ccworktime-linux-x64 /usr/local/bin/ccworktime
 
 # Windows (x64, PowerShell)
-Invoke-WebRequest -Uri https://github.com/ShahadIshraq/cctime/releases/latest/download/cctime-windows-x64.zip -OutFile cctime.zip
-Expand-Archive cctime.zip -DestinationPath .
-Move-Item cctime-windows-x64.exe "$env:LOCALAPPDATA\Microsoft\WindowsApps\cctime.exe"
+Invoke-WebRequest -Uri https://github.com/ShahadIshraq/ccworktime/releases/latest/download/ccworktime-windows-x64.zip -OutFile ccworktime.zip
+Expand-Archive ccworktime.zip -DestinationPath .
+Move-Item ccworktime-windows-x64.exe "$env:LOCALAPPDATA\Microsoft\WindowsApps\ccworktime.exe"
 ```
 
 ### npm (requires Node.js >= 18)
 
 ```sh
-npx cctime
+npx ccworktime
 ```
 
 Or install globally:
 
 ```sh
-npm install -g cctime
+npm install -g ccworktime
 ```
 
 ## Usage
 
 ```
-cctime [options]
+ccworktime [options]
 ```
 
 | Flag | Description | Default |
@@ -71,19 +71,19 @@ cctime [options]
 
 ```sh
 # Today's total
-cctime
+ccworktime
 
 # All of February
-cctime --from 2026-02-01 --to 2026-02-28
+ccworktime --from 2026-02-01 --to 2026-02-28
 
 # This week, one project only
-cctime --week --project ~/workspace/myapp
+ccworktime --week --project ~/workspace/myapp
 
 # Tighter session gap, accumulate overlaps
-cctime --pause 5 --overlap accumulate
+ccworktime --pause 5 --overlap accumulate
 
 # Yesterday, no subagent time
-cctime --yesterday --no-subagents
+ccworktime --yesterday --no-subagents
 ```
 
 ## Sample Output
